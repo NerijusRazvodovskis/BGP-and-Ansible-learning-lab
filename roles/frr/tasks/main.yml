@@ -1,0 +1,34 @@
+---   
+- name: Import FRR Key
+  ansible.builtin.apt_key:
+    url: https://deb.frrouting.org/frr/keys.asc
+
+- name: Enable FRR repository
+  ansible.builtin.apt_repository:
+    repo: "deb https://deb.frrouting.org/frr {{ ansible_distribution_release }} frr-stable"
+
+- name: Install FRR
+  ansible.builtin.package:
+    name:
+      - frr
+
+- name: Copy FRR daemons
+  ansible.builtin.copy:
+    src: daemons
+    dest: /etc/frr/daemons
+    mode: 0640
+
+- name: Configure FRR
+  ansible.builtin.template:
+    src: frr.conf.j2
+    dest: /etc/frr/frr.conf
+    mode: 0640
+    validate: /usr/bin/vtysh -f %s -C
+  notify:
+    - Reload FRR
+
+- name: Start and enable FRR service
+  ansible.builtin.service:
+    name: frr
+    enabled: true
+    state: started

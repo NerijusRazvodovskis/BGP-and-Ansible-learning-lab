@@ -1,0 +1,34 @@
+name: bgp-learning
+
+prefix: ""
+topology:
+  defaults:
+    kind: generic_vm
+    image: vrnetlab/canonical_ubuntu:jammy
+  nodes:
+    isp1:
+    isp2:
+    isp3:
+    isp4:
+    isp5:
+    isp6:
+    customer1:
+    customer2:
+  links:
+    - endpoints: ["customer1:eth1", "isp1:eth1"]
+    - endpoints: ["customer1:eth2", "isp3:eth1"]
+    - endpoints: ["customer1:eth3", "isp5:eth1"]
+    - endpoints: ["customer2:eth1", "isp2:eth1"]
+    - endpoints: ["customer2:eth2", "isp4:eth1"]
+    - endpoints: ["customer2:eth3", "isp6:eth1"]
+    - endpoints: ["isp1:eth2", "isp2:eth2"]
+    - endpoints: ["isp1:eth3", "isp3:eth2"]
+    - endpoints: ["isp1:eth4", "isp4:eth2"]
+    - endpoints: ["isp3:eth3", "isp2:eth3"]
+    - endpoints: ["isp3:eth4", "isp4:eth3"]
+    - endpoints: ["isp3:eth5", "isp5:eth2"]
+    - endpoints: ["isp3:eth6", "isp6:eth2"]
+    - endpoints: ["isp5:eth3", "isp4:eth4"]
+    - endpoints: ["isp5:eth4", "isp6:eth3"]
+    - endpoints: ["isp2:eth4", "isp4:eth5"]
+    - endpoints: ["isp4:eth6", "isp6:eth4"]

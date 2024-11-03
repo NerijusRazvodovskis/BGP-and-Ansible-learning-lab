@@ -1,0 +1,6 @@
+---
+- name: Loop over interfaces and bring them up
+  ansible.builtin.include_tasks: setup_interfaces.yml
+  loop: "{{ interfaces | dict2items }}"
+  loop_control:
+    loop_var: interface

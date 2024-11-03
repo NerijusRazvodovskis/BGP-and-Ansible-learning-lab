@@ -1,0 +1,15 @@
+---
+- name: Check if IP address "{{ interface.value.ip }}" is already assigned to "{{ interface.key }}"
+  ansible.builtin.shell: |
+    ip addr show dev "{{ interface.key }}" | grep -w "{{ interface.value.ip }}"
+  register: ip_check
+  ignore_errors: yes
+
+- name: Add IP address to "{{ interface.key }}"
+  ansible.builtin.command:
+    cmd: ip addr add dev "{{ interface.key }}" "{{ interface.value.ip }}"
+  when: ip_check.rc != 0
+
+- name: Bring "{{ interface.key }}" UP
+  ansible.builtin.command:
+    cmd: ip link set dev "{{ interface.key }}" up
