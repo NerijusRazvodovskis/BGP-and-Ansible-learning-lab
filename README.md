@@ -1,3 +1,3 @@
 # BGP and Ansible learning lab
 
-![bgp-learning](https://github.com/user-attachments/assets/e08e9c26-1572-44d1-a352-92bad312ec66)
+![image](https://github.com/user-attachments/assets/ec56b7d8-2ee4-46bb-9e9b-c40958216394)
