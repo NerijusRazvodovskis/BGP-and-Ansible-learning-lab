@@ -1,6 +1,6 @@
 # BGP and Ansible learning lab
 
-This repository provides a pre-configured [Containerlab](https://containerlab.dev/) topology featuring 8 virtual machines running Ubuntu Generic VM. The environment is designed to facilitate BGP (Border Gateway Protocol) studies and is configured to install [FRR](https://docs.frrouting.org/en/latest/) using Ansible for streamlined setup and automation.
+This repository provides a pre-configured [Containerlab](https://containerlab.dev/) topology featuring 8 virtual machines running [Ubuntu Generic VM](https://containerlab.dev/manual/kinds/generic_vm/). The environment is designed to facilitate BGP (Border Gateway Protocol) studies and is configured to install [FRR](https://docs.frrouting.org/en/latest/) using [Ansible](https://docs.ansible.com/) for streamlined setup and automation.
 
 ## Key Features
 
