@@ -1,0 +1,7 @@
+ansible_become: true
+ansible_become_method: sudo
+ansible_become_user: root
+
+sysctl_values:
+  net.ipv4.ip_forward: 1
+  net.ipv4.conf.all.forwarding: 1

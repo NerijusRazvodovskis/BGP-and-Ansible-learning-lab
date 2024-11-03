@@ -1,0 +1,4 @@
+- name: Reload FRR
+  ansible.builtin.systemd:
+    name: frr
+    state: reloaded
