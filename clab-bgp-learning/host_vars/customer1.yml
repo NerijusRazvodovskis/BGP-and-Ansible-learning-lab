@@ -1,0 +1,21 @@
+---
+interfaces:
+  ens2:
+    ip: 192.168.1.2/24
+  ens3:
+    ip: 192.168.3.2/24
+  enp1s4:
+    ip: 192.168.5.2/24
+
+frr_settings:
+  asn: 100
+  neighbors:
+    isp1:
+      asn: 11
+      ip: 192.168.1.1
+    isp3:
+      asn: 33
+      ip: 192.168.3.1
+    isp5:
+      asn: 55
+      ip: 192.168.5.1

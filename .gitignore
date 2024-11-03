@@ -1,0 +1,10 @@
+ansible-cache
+lib
+bin
+pyvenv.cfg
+.bgp-learning.clab.yml.bak
+clab-bgp-learning/topology-data.json
+clab-bgp-learning/authorized_keys
+clab-bgp-learning/.tls
+clab-bgp-learning/customer*
+clab-bgp-learning/isp*

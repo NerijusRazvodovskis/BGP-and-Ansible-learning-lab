@@ -1,0 +1,36 @@
+---
+interfaces:
+  ens2:
+    ip: 192.168.3.1/24
+  ens3:
+    ip: 10.2.0.2/16
+  enp1s4:
+    ip: 10.4.0.1/16
+  enp1s5:
+    ip: 10.5.0.1/16
+  enp1s6:
+    ip: 10.6.0.1/16
+  enp1s7:
+    ip: 10.7.0.1/16
+
+frr_settings:
+  asn: 33
+  neighbors:
+    customer1:
+      asn: 100
+      ip: 192.168.3.2
+    isp1:
+      asn: 11
+      ip: 10.2.0.1
+    isp2:
+      asn: 22
+      ip: 10.4.0.2
+    isp4:
+      asn: 44
+      ip: 10.5.0.2
+    isp5:
+      asn: 55
+      ip: 10.6.0.2
+    isp6:
+      asn: 66
+      ip: 10.7.0.2

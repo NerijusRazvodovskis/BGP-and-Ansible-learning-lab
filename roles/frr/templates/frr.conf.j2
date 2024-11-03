@@ -1,0 +1,8 @@
+!
+router bgp {{ frr_settings.asn }}
+ no bgp ebgp-requires-policy
+{% for peer, details in frr_settings.neighbors.items() %}
+ neighbor {{ details.ip }} remote-as {{ details.asn }}
+ neighbor {{ details.ip }} description {{ peer }}
+{% endfor %}
+!
