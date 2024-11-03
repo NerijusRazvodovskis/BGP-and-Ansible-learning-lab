@@ -14,3 +14,5 @@ This setup is perfect for network engineers and enthusiasts who want to build th
 
 ## Lab Topology
 ![image](https://github.com/user-attachments/assets/ec56b7d8-2ee4-46bb-9e9b-c40958216394)
+
+After deploying the lab, all of the BGP sessions will be UP already.
