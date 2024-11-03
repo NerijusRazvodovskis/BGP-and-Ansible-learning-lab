@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "172.20.20.1"
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "172.20.20.2"
