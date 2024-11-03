@@ -16,3 +16,17 @@ This setup is perfect for network engineers and enthusiasts who want to build th
 ![image](https://github.com/user-attachments/assets/ec56b7d8-2ee4-46bb-9e9b-c40958216394)
 
 After deploying the lab and running the ansible, all of the BGP sessions will be UP already.
+
+## Requirements
+
+* [Install](https://containerlab.dev/install/) the Containerlab.
+* Any of the Ansible version should be fine, i'm using one from: `pip install -r ./requirements.txt`.
+
+## Starting the lab
+
+* Execute `./deploy-lab.sh`.
+* Run the ansible for init configuration with `ansible-playbook playbooks/configure.yml -i clab-bgp-learning/ansible-inventory.yml`.
+
+## Destroying the lab
+
+* Execute `./destroy-lab.sh`.
