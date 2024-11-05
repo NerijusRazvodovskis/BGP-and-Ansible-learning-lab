@@ -30,3 +30,21 @@ After deploying the lab and running the ansible, all of the BGP sessions will be
 ## Destroying the lab
 
 * Execute `./destroy-lab.sh`.
+
+## Reaching the nodes
+
+After you bring up the lab UP, following entries will be generated to `/etc/hosts`:
+
+```
+###### CLAB-bgp-learning-START ######
+172.20.20.8	isp3
+172.20.20.6	isp4
+172.20.20.5	isp5
+172.20.20.9	isp6
+172.20.20.4	customer1
+172.20.20.7	customer2
+172.20.20.3	isp1
+172.20.20.2	isp2
+```
+
+You can reach any of them by executing `ssh clab@isp1`, password `clab@123`.
